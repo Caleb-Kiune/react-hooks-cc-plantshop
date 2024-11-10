@@ -26,6 +26,7 @@ button {
 button.primary {
   background-color: var(--green);
   color: white;
+  margin-right: 50px;
 }
 
 .app {
@@ -135,3 +136,11 @@ input:focus {
     width: calc(20% - 2rem);
   }
 }
+
+.delete-button{
+  color:white;
+  background-color:red;
+  
+}
+
+

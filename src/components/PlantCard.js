@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
-function PlantCard({name,image,price}) {
+function PlantCard({id,name,image,price,deletePlant}) {
 
   const [isAvailable, setIsAvailable] = useState(true)
 
   function handleAvailabilityToggle() {
     setIsAvailable(!isAvailable)
+  }
+
+  function handleDelete() {
+    deletePlant(id)
   }
 
 
@@ -19,6 +23,8 @@ function PlantCard({name,image,price}) {
       ) : (
         <button onClick={handleAvailabilityToggle}>Out of Stock</button>
       )}
+      {!isAvailable && <p>Sold out</p>}
+      <button className="delete-button" onClick={handleDelete}>Delete</button>
     </li>
   );
 }

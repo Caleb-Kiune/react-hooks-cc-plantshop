@@ -45,14 +45,14 @@
     {
       "name": "cactus",
       "image": "./images/aloe.jpg",
-      "price": "23.01",
+      "price": "22.99",
       "id": 8
     },
     {
-      "name": "Kiune",
-      "image": "./images/pilea.jpg",
-      "price": "100",
-      "id": 9
+      "name": "Rosemary",
+      "image": "./images/zz-plant.jpg",
+      "price": "25.01",
+      "id": 10
     }
   ]
 }
