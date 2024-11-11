@@ -10,7 +10,7 @@ function PlantPage() {
   const [searchTerm, setSearchTerm] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:6001/plants')
+    fetch('https://caleb-kiune.github.io/json-plantsy-server-db/db.json')
     .then((response) => response.json())
     .then((data) => { 
       console.log("Fetched plants data:", data);
