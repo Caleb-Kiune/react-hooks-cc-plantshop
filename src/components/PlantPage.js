@@ -28,7 +28,7 @@ function PlantPage() {
   }
 
   function handleDeletePlant(id){
-    fetch(`http://localhost:6001/plants/${id}`,{
+    fetch(`https://caleb-kiune.github.io/json-plantsy-server-db/db.json/${id}`,{
       method: 'DELETE',
     })
     .then(() => {

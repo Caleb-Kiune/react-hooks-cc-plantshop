@@ -15,7 +15,7 @@ function NewPlantForm({onAddPlant}) {
 
   function handleFormSubmit(e){
     e.preventDefault()
-    fetch('http://localhost:6001/plants',{
+    fetch('https://caleb-kiune.github.io/json-plantsy-server-db/db.json',{
       method:'POST',
       headers:{'Content-Type':'Application/JSON'},
       body: JSON.stringify(newPlantData),
