@@ -9,8 +9,10 @@ function PlantPage() {
 
   const [searchTerm, setSearchTerm] = useState('')
 
+  const baseURL = "https://my-json-server.typicode.com/Caleb-Kiune/react-hooks-cc-plantshop/plants"
+
   useEffect(() => {
-    fetch('https://caleb-kiune.github.io/json-plantsy-server-db/db.json')
+    fetch(baseURL)
     .then((response) => response.json())
     .then((data) => { 
       console.log("Fetched plants data:", data);
@@ -27,8 +29,10 @@ function PlantPage() {
     setSearchTerm(term)
   }
 
+
+
   function handleDeletePlant(id){
-    fetch(`https://caleb-kiune.github.io/json-plantsy-server-db/db.json/${id}`,{
+    fetch(`baseURL${id}`,{
       method: 'DELETE',
     })
     .then(() => {

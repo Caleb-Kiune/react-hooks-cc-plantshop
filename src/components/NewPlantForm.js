@@ -13,9 +13,11 @@ function NewPlantForm({onAddPlant}) {
     setNewPlantData({...newPlantData,[name]:value})
   }
 
+  const baseURL = "https://my-json-server.typicode.com/Caleb-Kiune/react-hooks-cc-plantshop/plants"
+
   function handleFormSubmit(e){
     e.preventDefault()
-    fetch('https://caleb-kiune.github.io/json-plantsy-server-db/db.json',{
+    fetch(baseURL,{
       method:'POST',
       headers:{'Content-Type':'Application/JSON'},
       body: JSON.stringify(newPlantData),
